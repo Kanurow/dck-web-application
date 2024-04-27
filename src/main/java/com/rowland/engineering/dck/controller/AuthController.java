@@ -65,7 +65,6 @@ public class AuthController {
                 jwt));
     }
 
-
     @Operation(
             summary = "Enables user registration - To sign up with admin role, add `row` to email field."
     )
@@ -110,7 +109,6 @@ public class AuthController {
         URI location = ServletUriComponentsBuilder
                 .fromCurrentContextPath().path("/api/v1/users/{email}")
                 .buildAndExpand(savedUser.getEmail()).toUri();
-
         return ResponseEntity.created(location).body(new ApiResponse(true, "User registered successfully"));
     }
 
