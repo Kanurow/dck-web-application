@@ -49,7 +49,7 @@ public class AuthController {
 
 
     @Operation(
-            summary = "Enables user log in - Users can user either username or email address"
+            summary = "Enables user log in - Users can user either phone number or email address"
     )
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
