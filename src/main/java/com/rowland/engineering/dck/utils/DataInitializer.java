@@ -1,6 +1,7 @@
 package com.rowland.engineering.dck.utils;
 
 import com.rowland.engineering.dck.exception.AppException;
+import com.rowland.engineering.dck.model.Gender;
 import com.rowland.engineering.dck.model.Role;
 import com.rowland.engineering.dck.model.RoleName;
 import com.rowland.engineering.dck.model.User;
@@ -50,6 +51,7 @@ public class DataInitializer implements CommandLineRunner {
                 .id(1L)
                 .firstName("Rowland")
                 .lastName("Kanu")
+                .gender(Gender.MALE)
                 .dateOfBirth(LocalDate.of(2007, 11,20))
                 .email("kanurowland92@gmail.com")
                 .branchChurch("Kubwa")
@@ -59,11 +61,12 @@ public class DataInitializer implements CommandLineRunner {
 
         User user2 = User.builder()
                 .id(2L)
-                .firstName("Samuel")
+                .firstName("Juliet")
                 .lastName("Kanu")
+                .gender(Gender.FEMALE)
                 .dateOfBirth(LocalDate.of(1999, 4,15))
-                .email("kanurow12@gmail.com")
-                .branchChurch("Kubwa")
+                .email("kanujul12@gmail.com")
+                .branchChurch("Utako")
                 .phoneNumber("012345678")
                 .password(passwordEncoder.encode("flames"))
                 .build();
